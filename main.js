@@ -16,6 +16,9 @@ app.on("ready",()=>{
             slashes: true
         }
     ));
+
+    mainWindow.on('close',()=>app.quit());
+
     const mainMenu = Menu.buildFromTemplate(mainMenuTemlate);
     Menu.setApplicationMenu(mainMenu);
 });
