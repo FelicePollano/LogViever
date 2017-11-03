@@ -1,0 +1,17 @@
+{
+  "name": "log-viewer",
+  "description": "multiple log viewer",
+  "main": "main.js",
+  "authors": [
+    "Felice Pollano <felice@felicepollano.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
