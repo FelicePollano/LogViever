@@ -5,22 +5,28 @@
     <meta charset="UTF-8">
     <title>Log Viewer</title>
   </head>
-  <body>
-     
-      <div id='content' class="row">
+<body>
+<div class="container"> 
+    <div class="row">  
+        <div id='content' class="col col-md-12">
         
         <h1>LogViewer</h1>
-      </div>
-      <a class="btn btn-primary">Sniaka</a>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-md-2 ">
+    
+        We are using node <script>document.write(process.versions.node)</script>,
+        Chrome <script>document.write(process.versions.chrome)</script>,
+        and Electron <script>document.write(process.versions.electron)</script>.
+        </div>
+       
 
-
-
-    <script>
-        require('babel-register');
-        require('./app/app');
-    </script>
-  </body>
+</div>
+<script>
+    require('babel-register');
+    require('./app/app');
+</script>
+   
+</body>
 </html>
