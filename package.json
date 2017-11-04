@@ -12,7 +12,5 @@
   "dependencies": {
     "electron": "^1.7.9"
   },
-  "devDependencies": {
-    "@angular/cli": "^1.5.0"
-  }
+  "devDependencies": {}
 }
