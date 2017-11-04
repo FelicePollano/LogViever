@@ -28,6 +28,7 @@ var showOpen = function() {
 };
 
 const mainMenuTemlate=[
+    //File
     {
         label:"File",
         submenu:[
@@ -44,5 +45,29 @@ const mainMenuTemlate=[
                 click:()=>app.quit()
             }
         ]
+    },
+    //View
+    {
+        label:'View',
+        submenu:[
+            {
+                label:"Clear"
+            }
+        ]
     }
 ];
+
+if(process.env.NODE_ENV!=='production'){
+    mainMenuTemlate[1].submenu.push(
+        {
+            label:'Toggle Dev Tools',
+            accelerator:'F12',
+            click:(item,focusedWindow)=>focusedWindow.toggleDevTools()
+        }
+    );
+    mainMenuTemlate[1].submenu.push(
+        {
+            role:'reload'
+        }
+    );
+}

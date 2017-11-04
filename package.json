@@ -8,7 +8,7 @@
     "start": "electron ."
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "electron": "^1.7.9",
     "react": "^16.0.0",

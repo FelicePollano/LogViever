@@ -6,7 +6,8 @@
     <title>Log Viewer</title>
   </head>
   <body>
-      <div class="row">
+     
+      <div id='content' class="row">
         
         <h1>LogViewer</h1>
       </div>
@@ -14,5 +15,11 @@
     We are using node <script>document.write(process.versions.node)</script>,
     Chrome <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
+
+
+
+    <script>
+        require('./app/app');
+    </script>
   </body>
 </html>
