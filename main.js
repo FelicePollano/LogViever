@@ -2,10 +2,13 @@
 const electron = require("electron");
 const url = require("url");
 const path = require("path");
+const Listener = require("./listener");
 
 const {app,BrowserWindow,Menu,dialog} = electron;
 
 let mainWindow;
+let listeners = [];
+
 
 app.on("ready",()=>{
     mainWindow = new BrowserWindow();
@@ -23,8 +26,16 @@ app.on("ready",()=>{
     Menu.setApplicationMenu(mainMenu);
 });
 
+
+function listenToFiles(files){
+    for(let k in files){
+        listeners.push(new Listener(files[k]));
+    }
+}
+
+
 var showOpen = function() {
-	dialog.showOpenDialog({ properties: [ 'openFile'], filters: [{ extensions: ['txt','log','*'] }]});
+	dialog.showOpenDialog({ properties: [ 'openFile'], filters: [{ extensions: ['txt','log','*'] }]},(files)=>listenToFiles(files));
 };
 
 const mainMenuTemlate=[
