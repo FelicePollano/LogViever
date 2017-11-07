@@ -13,6 +13,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
+    "bootstrap": "^3.3.7",
     "electron": "^1.7.9",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
