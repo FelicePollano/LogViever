@@ -4,6 +4,7 @@ const url = require("url");
 const path = require("path");
 const Listener = require("./listener");
 
+
 const {app,BrowserWindow,Menu,dialog} = electron;
 
 let mainWindow;
@@ -26,10 +27,13 @@ app.on("ready",()=>{
     Menu.setApplicationMenu(mainMenu);
 });
 
+function listenTo(data){
+    console.log(data);
+}
 
 function listenToFiles(files){
     for(let k in files){
-        listeners.push(new Listener(files[k]));
+        listeners.push(new Listener(files[k],listenTo));
     }
 }
 
@@ -82,3 +86,6 @@ if(process.env.NODE_ENV!=='production'){
         }
     );
 }
+
+
+//append
